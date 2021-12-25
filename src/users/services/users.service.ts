@@ -30,6 +30,6 @@ export class UsersService {
   }
 
   updateOne(id: number, user: UpdateUserDto): Observable<any> {
-    return from(this.userRepository.delete(id));
+    return from(this.userRepository.update(id, user));
   }
 }
